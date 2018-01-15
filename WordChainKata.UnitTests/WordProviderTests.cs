@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using WordchainKata.Domain.WordProvider;
+using WordChainKata.Domain.WordProvider;
 using Xunit;
 
 namespace WordChainKata.UnitTests

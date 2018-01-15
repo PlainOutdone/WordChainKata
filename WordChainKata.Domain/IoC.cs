@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.Extensions.DependencyInjection;
+using WordChainKata.Domain.WordProvider;
 
 namespace WordChainKata.Domain
 {
@@ -37,7 +38,7 @@ namespace WordChainKata.Domain
         {
             var services = new ServiceCollection();
 
-            
+            services.AddSingleton<IWordProvider, WordProvider.WordProvider>();
 
             return services;
         }

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace WordchainKata.Domain.WordProvider
+namespace WordChainKata.Domain.WordProvider
 {
     public class WordProvider : IWordProvider
     {

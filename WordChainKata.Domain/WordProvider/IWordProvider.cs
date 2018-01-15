@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace WordchainKata.Domain.WordProvider
+namespace WordChainKata.Domain.WordProvider
 {
    public interface IWordProvider
     {
