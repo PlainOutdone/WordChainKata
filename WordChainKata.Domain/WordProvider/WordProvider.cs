@@ -8,7 +8,9 @@ namespace WordchainKata.Domain.WordProvider
         public List<string> GetWords(string fileLocation, int wordLength)
         {
             List<string> allWords = System.IO.File.ReadAllLines(fileLocation).ToList();
-             return allWords.Where(w => w.Length == wordLength || wordLength == 0).ToList(); 
+            return allWords
+                .Where(l => l.Length == wordLength || wordLength == 0).ToList()
+                .ConvertAll(w => w.ToLower()).Distinct().ToList();
         }
     }
 
