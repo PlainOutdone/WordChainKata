@@ -14,4 +14,13 @@
     <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\WordChainKata.Domain\WordChainKata.Domain.csproj" />
+  </ItemGroup>
+
+  <Target Name="CopyFiles" AfterTargets="build">
+    <Copy DestinationFolder="$(OutputPath)" SourceFiles="wordlist.txt" SkipUnchangedFiles="false" />
+  </Target>
+
+
 </Project>

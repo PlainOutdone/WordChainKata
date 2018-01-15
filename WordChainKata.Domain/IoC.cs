@@ -1,5 +1,7 @@
 ﻿using System;
 using Microsoft.Extensions.DependencyInjection;
+using WordChainKata.Domain.AvailableWordFinder;
+using WordChainKata.Domain.WordController;
 using WordChainKata.Domain.WordProvider;
 
 namespace WordChainKata.Domain
@@ -39,6 +41,8 @@ namespace WordChainKata.Domain
             var services = new ServiceCollection();
 
             services.AddSingleton<IWordProvider, WordProvider.WordProvider>();
+            services.AddTransient<IWordController, WordController.WordController>();
+            services.AddSingleton<IAvailableWordFinder, AvailableWordFinder.AvailableWordFinder>();
 
             return services;
         }
